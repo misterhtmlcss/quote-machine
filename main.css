@@ -1,0 +1,43 @@
+body {
+    color: white;
+    background: #0cebeb;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #29ffc6, #20e3b2, #0cebeb);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #29ffc6, #20e3b2, #0cebeb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.container {
+    font-size: 1.3rem;
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    /* background:#f2fcfe; */
+}
+
+.spacing {
+    height: 165px;
+    /* padding-top: 65px;
+    padding-bottom: 25px;*/
+    margin-bottom: 10px;  
+}
+
+#button {
+    background-color: black;
+    border: white;
+}
+
+.text-color {
+    color: black
+}
+
+.header {
+    font-size: 3rem;
+    line-height: 3rem;
+}
+
+.quoteAuthor {
+    text-align: right
+}
+
+footer {
+    margin-top: 50%;   
+}
