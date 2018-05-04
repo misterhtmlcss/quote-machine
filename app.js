@@ -4,19 +4,18 @@ http.onreadystatechange = function() {
 		const response = JSON.parse(http.responseText);
 		const quotes = response.quotes;
 		const quoteLength = quotes.length;
-		
         const buttonClick = getClick("block")
-        
+
         buttonClick.addEventListener("click", sendValue)
-        
+
 		function sendValue() {
             const randomNumber = getRandomQuote(quoteLength);
 			function buildQuote() {
 				let output = "";
-                output += 
+                output +=
                 `<p class="card-text text-color">
                 ${quotes[randomNumber].content}
-                </p><p class="quoteAuthor text-color"> 
+                </p><p class="quoteAuthor text-color">
                 ${quotes[randomNumber].author}</p>`;
                 return (document.getElementById("quotes").innerHTML = output);
 			}
@@ -25,7 +24,7 @@ http.onreadystatechange = function() {
 				let output2 = "";
 				output2 +=
                 `
-                <a class="btn btn-primary btn-sm" data-toggle="button" href="https://twitter.com/intent/tweet?hashtags=fcc&text=${quotes[randomNumber].content} By ${quotes[randomNumber].author}">tweet me!</a>
+                <a class="btn btn-primary btn-sm" data-toggle="button" href="https://twitter.com/intent/tweet?hashtags=fcc&text=${quotes[randomNumber].content} By ${quotes[randomNumber].author}" target="_blank">tweet me!</a>
                 `
                 return (document.getElementById("shareable").innerHTML = output2);
 			}
